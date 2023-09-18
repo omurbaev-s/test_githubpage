@@ -5,34 +5,82 @@
         <meta name="vievport" content="width=device-width, initial-scale=1">
         <title>My Website</title>
         <style>
-            /* Apply CSS styles to the image */
-            img {
-                max-width: 100%; 
-                height: auto;
-                width: 400px;
+            h1 {
+                text-align: center;
+                border: 10px dotted #000; /* Set the border properties */
+                display: inline-flexbox; /* Make the element inline, so the border wraps closely around the text */
+                padding: 5px;
             }
+            
+            .something {
+                background-color: lightblue;
+                color: black;
+                opacity: 0.8;
+                padding: 10px;
+            }
+            
+            .container {
+            background-color: lightgray;
+            color:black;
+            opacity: 0.8;
+            padding: 20px;
+            }
+            .margin {
+                border: 1px solid black;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: lightblue;
+                width: 50%;
+                text-align: center;
+                opacity: 0.8;
+                padding: 8px;
+            }
+            body {
+                background-image: url("https://img.freepik.com/premium-photo/generative-ai-illustration-misty-tree-background_873073-472.jpg");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }   
         </style>
     </head>
     <body>
         <h1>My First Website</h1>
-        <h2>Hello, my name is Sanzhar and I am creating my first website!</h2>
-        <h3>Biography</h3>
-        I was born in 1999 in Balykchy city. My family moved to Kara Balta in 2000 and I spent my childhood there. It's very beautiful city and I have a lot of bright and warm memories associated with this city. 
+        <h2 class = "something">Hello, my name is Sanzhar and I am creating my first website!</h2>
+        <div class="margin">
+            <h3>Biography</h3>
+            I was born in 1999 in Balykchy city. My family moved to Kara Balta in 2000 and I spent my childhood there. It's very beautiful city and I have a lot of bright and warm memories associated with this city.</div>
         
-        <p><b>Kara-Balta</b></p>
+        <p class="container"><b>Kara-Balta</b></p>
         <hr>
-        <img src="https://i.ytimg.com/vi/OXcRVr9LSGE/maxresdefault.jpg">
+        <img height="300" width="500" src="https://i.ytimg.com/vi/OXcRVr9LSGE/maxresdefault.jpg" style="display: block; margin-left: 0; margin-right: auto;">
         <hr>
-        <b>School years</b>
-        <p>I studied at Bishkek Choreographic School named after <b>Cholponbek Bazarbaev.</b></p>
-        <img src="https://static.akipress.org/127/.storage/news/images/balet/4446f8fb9734c832789dd9d191b1ead3.JPG" alt="Image Description"><br>
-        
-        <p>I graduated in 2018 and in 2019 I was on a ballet tour of Europe. If you would like to see some part of my art, here is  
+        <div class="margin">
+            <h3>School years</h3>
+            I studied at <b><i>Bishkek Choreographic School</i></b> named after <b>Cholponbek Bazarbaev.</b><br>
+            I graduated in 2018 and in 2019 I was on a ballet tour of Europe. If you would like to see some part of my art, here is  
         <a href="https://youtu.be/Ge4J0H0KXI4?si=OIAXyBP8p6XJ2OMC" target="_blank">the link</a>
-        to one of my performanses. 
-        </p>
-        <b>University</b>
-        <p>After finishing school I decided to learn something new and entered AUCA. Now I am senior of Software Engineering department.</p>
-        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/12/hma2-architects-american-university-of-central-asia--auca--universities-archello.1597220771.755.jpg">
+        to one of my performanses.
+        </div>
+        <br>
+        <p class="container"><b>Cholponbek Bazarbaev</b></p>
+        <hr>
+        <img height="500" width="300" src="https://static.akipress.org/127/.storage/news/images/balet/4446f8fb9734c832789dd9d191b1ead3.JPG" alt="Image Description"><br>
+        <hr>
+        <div class="margin">
+            <h3>University</h3>
+            After finishing school I decided to learn something new and entered <b>AUCA</b>. Now I am senior of <b>Software Engineering</b> department.
+        </div>
+        <p class="container"><b>AUCA</b></p>
+        <hr>
+        <img height="300" width="500" src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/12/hma2-architects-american-university-of-central-asia--auca--universities-archello.1597220771.755.jpg">
+        <hr>
+        
+        <div class="container">
+            <h2>Contact Information</h2>
+            <address>
+                Email: omurbaev_s@auca.kg<br>
+                Phone: (996) 553 147 143
+            </address>
+        </div>
     </body>
 </html>

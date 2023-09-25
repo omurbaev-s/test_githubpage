@@ -7,36 +7,48 @@
         <style>
             h1 {
                 text-align: center;
-                border: 10px dotted #000; /* Set the border properties */
-                display: inline-flexbox; /* Make the element inline, so the border wraps closely around the text */
-                padding: 5px;
-            }
-            
-            .something {
-                background-color: lightblue;
-                color: black;
-                opacity: 0.8;
-                padding: 10px;
             }
             
             .container {
-            background-color: lightgray;
-            color:black;
-            opacity: 0.8;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; /* To vertically center the */ 
             }
+            
+            /* p {
+                background-color: aliceblue; 
+                width: 20%; 
+                text-align: center; 
+                padding: 8px;
+            } */
             .margin {
                 border: 1px solid black;
                 margin-right: auto;
                 margin-left: auto;
-                background-color: lightblue;
+                background-color: aliceblue;
                 width: 50%;
                 text-align: center;
                 opacity: 0.8;
                 padding: 8px;
             }
+            .btn-link {
+                display: inline-block;
+                background-color: aliceblue;
+                color: black;
+                opacity: 0.8; 
+                padding: 15px 30px;
+                width: 20%;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none; /* To remove the underline from the anchor */
+                text-align: center;
+            }
+            .btn-link:hover {
+                background-color: #555;
+                cursor: pointer; /* Hand icon when hovering over the button */
+            }
             body {
-                background-image: url("website_image.avif");
+                background-image: url("https://static.wixstatic.com/media/846d71_9f9f73d134734fff810300fba62d409a~mv2_d_1920_1281_s_2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/846d71_9f9f73d134734fff810300fba62d409a~mv2_d_1920_1281_s_2.jpg");
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -44,43 +56,37 @@
         </style>
     </head>
     <body>
-        <h1>My First Website</h1>
-        <h2 class = "something">Hello, my name is Sanzhar and I am creating my first website!</h2>
-        <div class="margin">
-            <h3>Biography</h3>
-            I was born in 1999 in Balykchy city. My family moved to Kara Balta in 2000 and I spent my childhood there. It's very beautiful city and I have a lot of bright and warm memories associated with this city.</div>
-        
-        <p class="container"><b>Kara-Balta</b></p>
         <hr>
-        <img height="300" width="500" src="https://i.ytimg.com/vi/OXcRVr9LSGE/maxresdefault.jpg" style="display: block; margin-left: 0; margin-right: auto;">
-        <hr>
+        <h1 style="color: aliceblue;">HOMELAND</h1>
         <div class="margin">
-            <h3>School years</h3>
-            I studied at <b><i>Bishkek Choreographic School</i></b> named after <b>Cholponbek Bazarbaev.</b><br>
-            I graduated in 2018 and in 2019 I was on a ballet tour of Europe. If you would like to see some part of my art, here is  
-        <a href="https://youtu.be/Ge4J0H0KXI4?si=OIAXyBP8p6XJ2OMC" target="_blank">the link</a>
-        to one of my performanses.
+            <h2>Kyrgyzstan</h2>
+            Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.
+            </div>
+    
+        <br><br><br><br><br>
+        <br>
+        <div class="container">
+            <a href="chui.html" class="btn-link">CHUI</a>
+            <a class="btn-link">ISYKKUL</a>
+            <a class="btn-link">NARYN</a>
         </div>
         <br>
-        <p class="container"><b>Cholponbek Bazarbaev</b></p>
-        <hr>
-        <img height="500" width="300" src="https://static.akipress.org/127/.storage/news/images/balet/4446f8fb9734c832789dd9d191b1ead3.JPG" alt="Image Description"><br>
-        <hr>
-        <div class="margin">
-            <h3>University</h3>
-            After finishing school I decided to learn something new and entered <b>AUCA</b>. Now I am senior of <b>Software Engineering</b> department.
+        <div class="container">
+            <a class="btn-link">TALAS</a>
+            <a class="btn-link">OSH</a>
+            <a class="btn-link">JALALABAD</a>
         </div>
-        <p class="container"><b>AUCA</b></p>
-        <hr>
-        <img height="300" width="500" src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/12/hma2-architects-american-university-of-central-asia--auca--universities-archello.1597220771.755.jpg">
+        <p style="text-align: center;"><a class="btn-link">BATKEN</a></p>
+
+        <br><br>
         <hr>
         
-        <div class="container">
+        <!-- <div class="container">
             <h2>Contact Information</h2>
             <address>
                 Email: omurbaev_s@auca.kg<br>
                 Phone: (996) 553 147 143
             </address>
-        </div>
+        </div> -->
     </body>
 </html>

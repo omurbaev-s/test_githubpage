@@ -13,23 +13,19 @@
             display: flex;
             justify-content: space-between; 
             align-items: center; /* To vertically center the */ 
+            font-weight: bold;
             }
             
-            /* p {
-                background-color: aliceblue; 
-                width: 20%; 
-                text-align: center; 
-                padding: 8px;
-            } */
             .margin {
-                border: 1px solid black;
                 margin-right: auto;
                 margin-left: auto;
                 background-color: aliceblue;
                 width: 50%;
                 text-align: center;
                 opacity: 0.8;
-                padding: 8px;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
             }
             .btn-link {
                 display: inline-block;
@@ -48,39 +44,53 @@
                 cursor: pointer; /* Hand icon when hovering over the button */
             }
             body {
-                background-image: url("https://static.wixstatic.com/media/846d71_9f9f73d134734fff810300fba62d409a~mv2_d_1920_1281_s_2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/846d71_9f9f73d134734fff810300fba62d409a~mv2_d_1920_1281_s_2.jpg");
+                background-image: url("my_image.jpg");
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
             }   
+            .panel{
+                display: none;
+                justify-content: space-between; 
+                align-items: center; /* To vertically center the */ 
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
-        <hr>
         <h1 style="color: aliceblue;">HOMELAND</h1>
-        <div class="margin">
+        <div class="margin" onclick="showBar()">
             <h2>Kyrgyzstan</h2>
             Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.
             </div>
     
-        <br><br><br><br><br>
         <br>
-        <div class="container">
-            <a href="chui_region/index.html" class="btn-link" target="_blank">CHUI</a>
+        <div class="panel" id="panel">
+            <a href="chui.html" class="btn-link" target="_blank">CHUI</a>
             <a class="btn-link">ISYKKUL</a>
             <a class="btn-link">NARYN</a>
         </div>
         <br>
-        <div class="container">
+        <div class="panel" id="panel">
             <a class="btn-link">TALAS</a>
             <a class="btn-link">OSH</a>
             <a class="btn-link">JALALABAD</a>
         </div>
-        <p style="text-align: center;"><a class="btn-link">BATKEN</a></p>
+        <!-- <p style="text-align: center;"><a class="btn-link"><b>BATKEN</b></a></p> -->
 
-        <br><br>
-        <hr>
-        
+        <script>
+            function showBar() {
+                if(document.getElementsByClassName("panel")[0].style.display == "flex"){
+                    document.getElementsByClassName("panel")[0].style.display = "none"  
+                    document.getElementsByClassName("panel")[1].style.display = "none"  
+                }
+                else{
+                    document.getElementsByClassName("panel")[0].style.display = "flex"  
+                    document.getElementsByClassName("panel")[1].style.display = "flex"  
+                }
+            }
+        </script>
+
         <!-- <div class="container">
             <h2>Contact Information</h2>
             <address>

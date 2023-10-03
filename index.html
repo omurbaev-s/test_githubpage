@@ -16,7 +16,7 @@
             font-weight: bold;
             }
             
-            .margin {
+            .margin, h2 {
                 margin-right: auto;
                 margin-left: auto;
                 background-color: aliceblue;
@@ -55,18 +55,28 @@
                 align-items: center; /* To vertically center the */ 
                 font-weight: bold;
             }
+            h1.sizeofheader{
+                font-size: 90px;
+                font-weight: bold;
+            }
+            div .size{
+                font-size: 50px;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
-        <h1 style="color: aliceblue;">HOMELAND</h1>
+        <div>
+            <h1 class="sizeofheader" style="color: aliceblue;">HOMELAND</h1>
+        </div>
         <div class="margin" onclick="showBar()">
-            <h2>Kyrgyzstan</h2>
-            Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.
-            </div>
+            <h2 class="size">Kyrgyzstan</h2>
+            <p>Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.</p>
+        </div>
     
         <br>
         <div class="panel" id="panel">
-            <a href="chui_region/index.html" class="btn-link" target="_blank">CHUI</a>
+            <a href="chui.html" class="btn-link" target="_blank">CHUI</a>
             <a class="btn-link">ISYKKUL</a>
             <a class="btn-link">NARYN</a>
         </div>

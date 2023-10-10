@@ -5,6 +5,20 @@
         <meta name="vievport" content="width=device-width, initial-scale=1">
         <title>My Website</title>
         <style>
+            .hero {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;      
+            }
+            .img-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+            }
             h1 {
                 text-align: center;
             }
@@ -48,10 +62,12 @@
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
+                margin: 0px;
+                padding: 0px;
             }   
             .panel{
                 display: none;
-                justify-content: space-between; 
+                justify-content: space-around; 
                 align-items: center; /* To vertically center the */ 
                 font-weight: bold;
             }
@@ -63,30 +79,65 @@
                 font-size: 50px;
                 font-weight: bold;
             }
+            header{
+                display: flex;
+                justify-content: space-between;
+                background-color: aliceblue;
+                opacity: 0.8;
+                padding: 15px;
+            }
+            footer {
+                background-color: black;
+                color: white;
+                padding: 10px;
+            }  
+            header a{
+                /* margin: 10px; */
+                text-decoration: none; 
+            } 
+            .menu{
+                margin-left: 10px;
+            }
         </style>
     </head>
     <body>
-        <div>
-            <h1 class="sizeofheader" style="color: aliceblue;">HOMELAND</h1>
-        </div>
-        <div class="margin" onclick="showBar()">
-            <h2 class="size">Kyrgyzstan</h2>
-            <p>Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.</p>
-        </div>
-    
-        <br>
-        <div class="panel" id="panel">
-            <a href="chui.html" class="btn-link" target="_blank">CHUI</a>
-            <a class="btn-link">ISYKKUL</a>
-            <a class="btn-link">NARYN</a>
-        </div>
-        <br>
-        <div class="panel" id="panel">
-            <a class="btn-link">TALAS</a>
-            <a class="btn-link">OSH</a>
-            <a class="btn-link">JALALABAD</a>
-        </div>
+        <header>
+            <a href="logo">LOGO</a>
+            <div>
+                <a class="menu" href="#home">Home</a>
+                <a class="menu" href="#contacts">Contacts</a>
+                <a class="menu" href="#about">About</a>
+                <a class="menu" href="#events">Events</a>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="img-header">
+                    <h1 class="sizeofheader" style="color: aliceblue;">HOMELAND</h1>
+                    <div class="margin" onclick="showBar()">
+                        <h2 class="size">Kyrgyzstan</h2>
+                        <p>Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.</p>
+                    </div>
+                
+                    <br>
+                    <div class="panel" id="panel">
+                        <a href="chui.html" class="btn-link" target="_blank">CHUI</a>
+                        <a class="btn-link">ISYKKUL</a>
+                        <a class="btn-link">NARYN</a>
+                    </div>
+                    <br>
+                    <div class="panel" id="panel">
+                        <a class="btn-link">TALAS</a>
+                        <a class="btn-link">OSH</a>
+                        <a class="btn-link">JALALABAD</a>
+                    </div>
+                </div>
+            </section>
+        </main>
         <!-- <p style="text-align: center;"><a class="btn-link"><b>BATKEN</b></a></p> -->
+        <footer>
+            footer
+        </footer>
 
         <script>
             function showBar() {

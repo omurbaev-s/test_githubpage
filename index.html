@@ -1,248 +1,252 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="vievport" content="width=device-width, initial-scale=1">
-        <title>My Website</title>
-        <style>
-            .hero {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;  
-                background-image: url("my_image.jpg");
-                /* background-image: linear-gradient(); */
-                background-size: 100% 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                margin: 0px;
-                padding: 0px; 
-                /* border: dotted;    */
-            }
-            .img-header {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                width: 100vw;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            h1 {
-                text-align: center;
-            }
-            
-            .container {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrgyz National Opera and Ballet Theater</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        } */
+        header{
             display: flex;
-            justify-content: space-between; 
-            align-items: center; /* To vertically center the */ 
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            opacity: 0.8;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            color: white;
+        }
+        #logo img {
+            width: 100px; /* Set the desired width for your logo */
+            height: auto;
+        }
+        header a{
+            /* margin: 10px; */
+            text-decoration: none; 
+            color: black;
+        } 
+        .logo {
+            display: flex;
+
+        }
+        h3 {
+            margin: 10px;
+            width: 300px;
+        }
+        .menu{
+            margin-left: 15px;
+            color: white;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;  
+            color: white;
+            /* background-image: linear-gradient(); */
+            /* background-image: url("theNutcracker.jpg"); */
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            /* margin-bottom: 10px; */
+            padding: 50px; 
+            /* border: dotted;    */
+            box-sizing: border-box;
+        }
+        .hero h2{
+            font-size: 70px;
+            margin: 0px;
+        }
+
+        /* section {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        } */
+
+        .cta-button {
+            display: inline-block;
+            padding: 1em 2em;
+            background-color: #4c4c4c;
+            color: #fff;
+            text-decoration: none;
             font-weight: bold;
-            }
-            
-            .margin, h2 {
-                margin-right: auto;
-                margin-left: auto;
-                color: white;
-                width: 50%;
-                text-align: center;
-            }
-            .btn-link {
-                display: inline-block;
-                background-color: aliceblue;
-                color: black;
-                opacity: 0.8; 
-                padding: 15px 30px;
-                width: 20%;
-                border: none;
-                border-radius: 5px;
-                text-decoration: none; /* To remove the underline from the anchor */
-                text-align: center;
-            }
-            .btn-link:hover {
-                background-color: #555;
-                cursor: pointer; /* Hand icon when hovering over the button */
-            }
-            body {
-                /* background-image: url("my_image.jpg"); */
-                /* background-image: linear-gradient(); */
-                /* background-size: 100% 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed; */
-                margin: 0px;
-                padding: 0px;
-                background-color:hsl(60, 18%, 93%)
-            }   
-            .panel{
-                display: none;
-                justify-content: space-around; 
-                align-items: center; /* To vertically center the */ 
-                font-weight: bold;
-            }
-            h1.sizeofheader{
-                font-size: 90px;
-                font-weight: bold;
-                margin: 30px;
-            }
-            div .size{
-                font-size: 20px;
-                /* font-weight: bold; */
-            }
-            header{
-                display: flex;
-                justify-content: space-between;
-                background-color: aliceblue;
-                opacity: 0.8;
-                padding: 15px;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            footer {
-                background-color: aliceblue;
-                color: black;
-                opacity: 0.8;
-                padding: 15px;
-            }  
-            header a{
-                /* margin: 10px; */
-                text-decoration: none; 
-                color: black;
-            } 
-            .menu{
-                margin-left: 10px;
-            }
-            .benefits {
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                margin-top: 50px;
-            }
-            .benefit {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 50px;
-                gap: 50px;
-            }
-            .benefits h2 {
-                align-self: center;
-                font-size: 60px;
-                text-align: center;
-                color: black;
-            }
-            .benefits h3 {
-                align-self: center;
-                font-size: 30px;
-            }
-            .reverse {
-                flex-direction: row-reverse;
-                background-color: rgb(223, 223, 223);
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <a href="logo">LOGO</a>
-            <div>
-                <a class="menu" href="#home">Home</a>
-                <a class="menu" href="#contacts">Contacts</a>
-                <a class="menu" href="#about">About</a>
-                <a class="menu" href="#events">Events</a>
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #747474;
+        }
+
+        .featured-events {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .event-card {
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+
+        .event-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .event-details {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#" id="logo">
+                <img src="logo3.jpg" alt="Logo">
+            </a>
+            <h3>
+                КЫРГЫЗСКИЙ НАЦИОНАЛЬНЫЙ АКАДЕМИЧЕСКИЙ ТЕАТР ОПЕРЫ И БАЛЕТА
+            </h3>
+        </div>
+        
+        <div>
+            <a class="menu" href="#home">О ТЕАТРЕ</a>
+            <a class="menu" href="#home">КУПИТЬ БИЛЕТ</a>
+            <a class="menu" href="#contacts">АФИША</a>
+            <a class="menu" href="#about">РЕПЕРТУАР</a>
+            <a class="menu" href="#events">ПРЕМЬЕРЫ</a>
+            <a class="menu" href="#events">КОНТАКТЫ</a>
+        </div>
+    </header>
+    <main>
+        <section id="event-container">
+            <!-- <div class="hero" style="background-image: url('theNutcracker.jpg');">
+                <h2>The Nutcracker</h2>
+                <a class="cta-button" href="#">Buy Tickets</a>
+            </div> -->
+        </section>
+        
+
+        <section>
+            <h2>Upcoming Events</h2>
+    
+            <div class="featured-events">
+                <!-- Event Cards (Replace with your own content) -->
+                <div class="event-card">
+                    <img class="event-image" src="event1.jpg" alt="Event 1">
+                    <div class="event-details">
+                        <h3>Event 1</h3>
+                        <p>Date: January 1, 2023</p>
+                        <p>Time: 7:00 PM</p>
+                        <a class="cta-button" href="#">Buy Tickets</a>
+                    </div>
+                </div>
+    
+                <div class="event-card">
+                    <img class="event-image" src="event2.jpg" alt="Event 2">
+                    <div class="event-details">
+                        <h3>Event 2</h3>
+                        <p>Date: February 14, 2023</p>
+                        <p>Time: 8:00 PM</p>
+                        <a class="cta-button" href="#">Buy Tickets</a>
+                    </div>
+                </div>
+    
+                <!-- Add more event cards as needed -->
             </div>
-        </header>
-        <main>
-            <section class="hero">
-                <div class="img-header">
-                    <h1 class="sizeofheader" style="color: aliceblue;">KYRGYZSTAN</h1>
-                    <div class="margin">
-                        <!-- <h2 class="size">Kyrgyzstan</h2> -->
-                        <p class="size">Kyrgyzstan, nestled in the heart of Central Asia, is a land of stunning landscapes, rich cultural heritage, and warm hospitality.</p>
-                    </div>
-                
-                    <br>
-                    <!-- <div class="panel" id="panel">
-                        <a href="chui.html" class="btn-link" target="_blank">CHUI</a>
-                        <a class="btn-link">ISYKKUL</a>
-                        <a class="btn-link">NARYN</a>
-                    </div>
-                    <br>
-                    <div class="panel" id="panel">
-                        <a class="btn-link">TALAS</a>
-                        <a class="btn-link">OSH</a>
-                        <a class="btn-link">JALALABAD</a>
-                    </div> -->
-                    <button class="btn-link" style="opacity: 1;">
-                        Explore 
-                    </button>
-                </div>
-            </section>
-            <section class="benefits">
-                <h2>Top 5 Places to Visit</h2>
-                <div class="benefit">
-                    <img height="300px" width="500px" src="https://cdn.turkishairlines.com/m/5d373dca8787e24d/original/Travel-Guide-of-Bishkek-via-Turkish-Airlines.jpg">
-                    <div>
-                        <h3>BISHKEK</h3>
-                        The capital of Kyrgyzstan, Bishkek, is the borderline of Central Asia's Tian Shan range. The Kyrgyz Ala-Too mountains and Ala Archa National Park adorned with wildlife trails and glaciers, concludes the scenic beauty of the place.
-                    </div>
-                </div>
-                
-                <div class="benefit reverse">
-                    <img height="300px" width="500px" src="https://minzifatravel.com/wp-content/uploads/2021/04/issiq-kul.jpg">
-                    <div>
-                        <h3>ISYK-KUL</h3>
-                        The pearl of the Tien Shan - Issyk-Kul is the largest lake in Kyrgyzstan. Issyk-Kul translates as "hot lake". The water temperature here does not drop to minus even in winter, so the lake never freezes. It is located at an altitude of 1,608 meters above sea level and ranks seventh in the list of the deepest lakes in the world.
-                    </div>
-                </div>
+    
+            <p style="text-align: center; margin-top: 2em;">
+                <a class="cta-button" href="#">View All Events</a>
+            </p>
+        </section>
+    </main>
 
-                <div class="benefit">
-                    <img height="300px" width="500px" src="https://minzifatravel.com/wp-content/uploads/2022/08/1640854988_2-krot-info-p-kirgiziya-stolitsa-osh-krasivo-foto-2.jpg"> 
-                    <div>
-                        <h3>OSH</h3>
-                        Osh is the second largest city in Kyrgyzstan; it has an official status of the state’s “southern capital”, located on the south-eastern outskirts of the Fergana valley at the northern foot of the Kichialai Range (south-western suburbs of the Tien Shan and north-eastern suburbs of the Pamir-Alay) on altitude 700 - 1000 meters above sea level. This ridge surrounds Osh on three sides, with Suleiman-Too peak rises over 100 m in the city center.
-                    </div>
-                </div>
-                
-                <div class="benefit reverse">
-                    <img height="300px" width="500px" src="https://www.kyrgyzstantravel.com/cdn/kg-public/son_kul_lake.jpg"> 
-                    <div>
-                        <h3>SONG-KUL</h3>
-                        Song-Kol (also known as Sonkol, Song-Köl, and Son-Kul) is a large alpine lake, sandwiched in a hollow between the inner spurs of the Tien Shan in the Naryn region (Kyrgyzstan). Sitting at 3016 meters above sea level, the lake is surrounded by virgin pastures, a conservation area, and the ridges of Sonköltoo and Moldotoo, making it the perfect site for ecological tourism.
-                    </div>
-                </div>
-
-                <div class="benefit">
-                    <img height="300px" width="500px" src="https://s0.wklcdn.com/image_31/947106/7333285/4257381.700x525.jpg"> 
-                    <div>
-                        <h3>ALA-ARCHA</h3>
-                        Ala Archa National Park lies in the Ala Too range of the Kyrgyz Tien Shan mountains and is home to several glaciers and river gorges. The name Ala archa translates as striped juniper and refers to the forests that characterize this beautiful landscape.
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- <p style="text-align: center;"><a class="btn-link"><b>BATKEN</b></a></p> -->
-        <!-- <footer>
-            footer
-        </footer> -->
-
-        <script>
-            function showBar() {
-                if(document.getElementsByClassName("panel")[0].style.display == "flex"){
-                    document.getElementsByClassName("panel")[0].style.display = "none"  
-                    document.getElementsByClassName("panel")[1].style.display = "none"  
-                }
-                else{
-                    document.getElementsByClassName("panel")[0].style.display = "flex"  
-                    document.getElementsByClassName("panel")[1].style.display = "flex"  
-                }
+    <script>
+        // Define an array of upcoming events
+        const events = [
+            {
+                title: "Щелкунчик",
+                // date: "January 1, 2023",
+                // time: "18:00",
+                image: "theNutcracker.jpg",
+            },
+            {
+                title: "Лебединое озеро",
+                // date: "January 2, 2023",
+                // time: "19:00",
+                image: "swanLake.jpg",
+            },
+            {
+                title: "Спартак",
+                // date: "January 2, 2023",
+                // time: "19:00",
+                image: "spartacus.jpg",
+            },
+            {
+                title: "Ромео и Джульетта",
+                // date: "January 2, 2023",
+                // time: "19:00",
+                image: "romeo.jpg",
             }
-        </script>
+            // Add more events as needed
+        ];
+    
+        let currentIndex = 0;
+    
+        function updateEvent() {
+            // Get the event container
+            const eventContainer = document.getElementById("event-container");
+    
+            // Get the current event
+            const currentEvent = events[currentIndex];
+    
+            // Update the content of the event container
+            eventContainer.innerHTML = `
+                <section id="event-container" class="hero" style="background-image: url('${currentEvent.image}');">
+                    <h2>${currentEvent.title}</h2>
+                    <a class="cta-button" href="#">Купить билет</a>
+                </section>
+            `;
+    
+            // Increment the index for the next event
+            currentIndex = (currentIndex + 1) % events.length;
+        }
+    
+        // Set an interval to update the event every 5 seconds (5000 milliseconds)
+        setInterval(updateEvent, 5000);
+    
+        // Initial call to display the first event
+        updateEvent();
+    </script>
+    
 
-        <!-- <div class="container">
-            <h2>Contact Information</h2>
-            <address>
-                Email: omurbaev_s@auca.kg<br>
-                Phone: (996) 553 147 143
-            </address>
-        </div> -->
-    </body>
+</body>
 </html>

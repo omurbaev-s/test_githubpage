@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            position: relative;
         }
 
         /* header {
@@ -22,12 +23,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* background-color: black; */
             opacity: 0.8;
             padding: 15px;
             font-family: Arial, Helvetica, sans-serif;
             box-sizing: border-box;
             color: white;
+            position: fixed;
+            width: 100%;
         }
         #logo img {
             width: 100px; /* Set the desired width for your logo */
@@ -42,36 +46,131 @@
             display: flex;
 
         }
-        h3 {
+        .logo h3 {
             margin: 10px;
             width: 300px;
         }
         .menu{
-            margin-left: 15px;
+            display: block;
             color: white;
+            position: absolute;
+            right: 0px;
+            width: 250px;
+            transition: 0.5s;
+        }
+        .menu ul {
+            list-style: none; 
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-end;
+            /* margin-left: 40px; */
+        }
+        .menu li {
+            /* display: inline; */
+            padding: 15px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #burger-toggle:checked ~ .menu {
+            display: block;
+            right: 0px;
+        }
+        /* #burger-toggle:checked ~ .burger .line {
+            display: block;
+            right: 0px;
+        } */
+
+        /* .burger .line {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            opacity: 0.8;
+        } */
+
+        #burger-toggle {
+            display: none;
+        }
+
+        .burger {
+            display: none;
+            position: absolute;
+            right: 20px;
+            z-index: 1;
+            font-size: 24px;
+        }
+        .close-icon {
+            display: none; 
+        }
+
+        @media (max-width: 768px) {
+            .burger {
+                display: block;
+            }  
+            #burger-toggle:checked + label .burger {
+                display: none;
+            }
+            
+            #burger-toggle:checked + label .close-icon {
+                display: block;
+                right: 20px;
+                z-index: 1;
+                position: absolute;
+                font-size: 24px;
+            }
+            
+            .menu {
+                /* display: none; */
+                background: #ba4848;
+                /* background-color: rgba(186, 72, 72, 0.8);  */
+                /* z-index: 10;     */
+                right: -100%;
+                /* opacity: 0.8; */
+            }  
+            
+            .menu li {
+                display: block;
+            }
+            
+            .menu ul {
+                /* display: flex; */
+                flex-direction: column;
+            }  
+            header {
+                align-items: start;
+            }
         }
 
         .hero {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: end;
+            align-items: start;
             height: 100vh;  
             color: white;
             /* background-image: linear-gradient(); */
             /* background-image: url("theNutcracker.jpg"); */
-            background-size: 100% 100%;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             /* background-attachment: fixed; */
-            /* margin-bottom: 10px; */
             padding: 50px; 
-            /* border: dotted;    */
             box-sizing: border-box;
+            gap: 20px;
         }
         .hero h2{
-            font-size: 70px;
+            font-size: 50px;
+            /* margin-bottom: 10px;
+            margin-top: 10px; */
+        }
+        * {
             margin: 0px;
+            padding: 0px;
         }
 
         /* section {
@@ -84,9 +183,9 @@
 
         .cta-button {
             display: inline-block;
-            padding: 1em 2em;
-            background-color: #4c4c4c;
-            color: #fff;
+            padding: 0.9em 2em;
+            background-color: white;
+            color: black;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
@@ -136,22 +235,33 @@
                 КЫРГЫЗСКИЙ НАЦИОНАЛЬНЫЙ АКАДЕМИЧЕСКИЙ ТЕАТР ОПЕРЫ И БАЛЕТА
             </h3>
         </div>
+
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle">
+            <div class="burger">&#9776;</div>
+            <div class="close-icon">&#10006;</div> 
+        </label>
         
-        <div>
-            <a class="menu" href="#home">О ТЕАТРЕ</a>
-            <a class="menu" href="#home">КУПИТЬ БИЛЕТ</a>
-            <a class="menu" href="#contacts">АФИША</a>
-            <a class="menu" href="#about">РЕПЕРТУАР</a>
-            <a class="menu" href="#events">ПРЕМЬЕРЫ</a>
-            <a class="menu" href="#events">КОНТАКТЫ</a>
-        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">О ТЕАТРЕ</a></li>
+                <li><a href="#home">КУПИТЬ БИЛЕТ</a></li>
+                <li><a href="#contacts">АФИША</a></li>
+                <li><a href="#about">РЕПЕРТУАР</a></li>
+                <li><a href="#events">ПРЕМЬЕРЫ</a></li>
+                <li><a href="#events">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="event-container">
-            <!-- <div class="hero" style="background-image: url('theNutcracker.jpg');">
+            <div class="hero" style="background-image: url('theNutcracker.jpg');">
                 <h2>The Nutcracker</h2>
+                <p>
+                    Балет в 2-х актах на музыку П. И. Чайковского
+                </p>
                 <a class="cta-button" href="#">Buy Tickets</a>
-            </div> -->
+            </div>
         </section>
         
 
@@ -189,31 +299,35 @@
         </section>
     </main>
 
-    <script>
+    <!-- <script>
         // Define an array of upcoming events
         const events = [
             {
                 title: "Щелкунчик",
-                // date: "January 1, 2023",
-                // time: "18:00",
+                subtitle: "Балет в 2-х актах на музыку П. И. Чайковского",
+                date: "January 1, 2024",
+                time: "18:00",
                 image: "theNutcracker.jpg",
             },
             {
                 title: "Лебединое озеро",
-                // date: "January 2, 2023",
-                // time: "19:00",
+                subtitle: "Балет в 4-х актах на музыку П. И. Чайковского",
+                date: "January 2, 2024",
+                time: "19:00",
                 image: "swanLake.jpg",
             },
             {
                 title: "Спартак",
-                // date: "January 2, 2023",
-                // time: "19:00",
+                subtitle: "Балет Арама Хачатуряна в 3-х актах",
+                date: "January 3, 2024",
+                time: "19:00",
                 image: "spartacus.jpg",
             },
             {
                 title: "Ромео и Джульетта",
-                // date: "January 2, 2023",
-                // time: "19:00",
+                subtitle: "Балет в 3-х актах на музыку С. С. Прокофьева",
+                date: "January 4, 2024",
+                time: "19:00",
                 image: "romeo.jpg",
             }
             // Add more events as needed
@@ -231,7 +345,9 @@
             // Update the content of the event container
             eventContainer.innerHTML = `
                 <section id="event-container" class="hero" style="background-image: url('${currentEvent.image}');">
+                    
                     <h2>${currentEvent.title}</h2>
+                    <p>${currentEvent.subtitle}</p>
                     <a class="cta-button" href="#">Купить билет</a>
                 </section>
             `;
@@ -245,7 +361,7 @@
     
         // Initial call to display the first event
         updateEvent();
-    </script>
+    </script> -->
     
 
 </body>
